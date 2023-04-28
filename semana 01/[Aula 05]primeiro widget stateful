@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+
+
+
+class MaterialWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return WidgetState();
+  }
+  
+}
+
+class WidgetState extends State<MaterialWidget> {
+  
+  int _counter = 0;
+  
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Sample StatefulWidget',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Sample StatefulWidget')),
+        body:Column(
+        children: [
+          Center(child: Text('Contador $_counter'),),
+          Row(
+            children: [
+              TextButton(
+                child: const Text('Incrementar'),
+                onPressed: () {
+                  setState(() {
+                    _counter++;
+                    print('clicou $_counter');
+                  });
+                },
+              ),
+              TextButton(
+                child: const Text('Incrementar'),
+                onPressed: () {
+                  setState(() {
+                    _counter--;
+                    print('clicou $_counter');
+                  });
+                },
+              )
+            ],
+          )
+        ],
+        )
+      )
+    );
+  }
+  
+}
+
+void main() {
+  runApp(MaterialWidget());
+}

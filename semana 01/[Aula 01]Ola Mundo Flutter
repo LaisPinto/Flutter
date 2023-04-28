@@ -1,0 +1,20 @@
+//widgets google
+import 'package:flutter/material.dart';
+
+class HelloWorldApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // MaterialApp(title, home: Scaffold(appBar:AppBar, body:Center(Text)))
+    return MaterialApp(
+      title: "hello world",
+      home: Scaffold(
+        backgroundColor: Colors.amber,
+        appBar: AppBar(title: const Text("App Hello word"),),
+          body: const Center(child: Text("My name: Laís Pinto", style: TextStyle(fontSize: 50),))
+        )
+      );
+  }
+ 
+}
+
+void main() => runApp(HelloWorldApp());

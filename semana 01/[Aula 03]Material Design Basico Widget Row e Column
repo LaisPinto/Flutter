@@ -1,0 +1,43 @@
+//Android - material desing Google
+import 'package:flutter/material.dart';
+
+class MyMatetialWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'MyMaterialApp',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: const Text('HOME'),),
+        body: Container(
+          alignment: Alignment.center,
+          color: Colors.blue,
+          child: Column(
+          children:  [
+            const SizedBox(height: 20),
+            const Text('a', style: TextStyle(
+              //backgroundColor: Colors.red,
+              //color: Colors.black,
+              fontSize: 40),
+           ),
+            const SizedBox(height: 20),
+            const Text('b'),
+            const SizedBox(height: 50),
+            Row(
+            children: const [
+              Text('c'),
+              Text('d')
+            ],
+           )
+          ],
+         ),
+        ) 
+      )
+    );
+  }
+  
+}
+
+void main() {
+  runApp(MyMatetialWidget());
+}

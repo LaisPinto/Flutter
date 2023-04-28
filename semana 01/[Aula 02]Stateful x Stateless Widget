@@ -1,0 +1,54 @@
+//stateful vs stateless
+import 'package:flutter/material.dart';
+//stateless
+////quado não tem alguma mudança é usado o stateless
+class MyStatelessWidget extends StatelessWidget {
+ 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title:  'App',
+      home: Scaffold(
+      appBar: AppBar(title: const Text('app'),),
+        body: const Center(child: Text('Exemplo stateless widget')),
+      ),
+    );
+  }
+  
+}
+//stateful 
+//quado tem alguma mudança é usado o stateful
+class MyStatefulWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => WidgetState(); 
+}
+
+class WidgetState extends State<MyStatefulWidget> {
+  
+  double _value = 0;
+  
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title:  'App',
+      home: Scaffold(
+      appBar: AppBar(title: const Text('app'),),
+        body: Center(
+          child:TextButton(
+          child: Text('OK $_value'),
+            onPressed: () {
+              print('funcionaa');
+              setState(() {
+                _value++;
+              });
+            }
+          )
+        ),
+      ),
+    );
+  }
+}
+void main() {
+  //runApp(MyStatelessWidget());
+  runApp(MyStatefulWidget());
+}
