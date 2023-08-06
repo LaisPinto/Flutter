@@ -1,7 +1,18 @@
 {
   "hello": "Ola",
-  "hello": "Ola",
-  "hello": "Ola",
-  "hello": "Ola",
-  "hello": "Ola",
+  "screens": {
+    "home": {
+      "title": {
+        "message": "Seja bem vindo"
+      }
+    }
+  },
+  "message": "{} foi escrito em linguagem {}",
+  "message_named": "Easy localization foi escrito em linguagem {language}",
+  "message_mixed": "{} foi escrito em linguagem {language}",
+  "example": {
+    "hello": "Ola",
+    "world": "Mundo!",
+    "helloWorld": "@:example.ola @:example.mundo"
+  }
 }
